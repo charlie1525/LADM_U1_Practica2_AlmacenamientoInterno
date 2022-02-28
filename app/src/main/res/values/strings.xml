@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">LADM_U1_Practica2_AlmacenamientoInterno</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title"> Todo Moda</string>
+    <string name="nav_header_subtitle">Ropa hecha a tu medida</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Salir</string>
+
+    <string name="menu_home">Inicio</string>
+    <string name="menu_gallery">Modelos</string>
+    <string name="menu_slideshow">Reservaciones</string>
+    <string name="menu_reservaciones">Reservaciones</string>
+
+
+    <!-- Seccion para los nombres de los textviews    -->
+    <string name="homeHello1">Tu moda de confianza</string>
+    <string name="homeHello2">para la confección que necesitas</string>
+</resources>

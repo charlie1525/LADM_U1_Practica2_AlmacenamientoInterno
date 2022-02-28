@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="10dp"
+    tools:context=".ui.slideshow.SlideshowFragment">
+
+    <LinearLayout
+        android:id="@+id/layoutCamposSlideShow"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:background="#8455BD"
+        android:orientation="horizontal"
+        android:padding="10dp">
+        <!-- Layput correspondiente a los campos, imagen y botones -->
+
+        <ImageView
+            android:id="@+id/imageDataLayout"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_gravity="top"
+            android:src="@drawable/iconochikorita" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:orientation="vertical">
+            <!-- Layout correspondiente a las cajas de texto -->
+
+            <EditText
+                android:id="@+id/inputNombreLV"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:hint="Nombre cmpleto"
+                android:inputType="text" />
+
+            <EditText
+                android:id="@+id/inputMotivoLV"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="5dp"
+                android:hint="Motivo de la cita"
+                android:inputType="text" />
+
+            <EditText
+                android:id="@+id/inputHoraLV"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="5dp"
+                android:hint="Hora de la cita"
+                android:inputType="datetime" />
+
+        </LinearLayout>  <!-- fin del layout para los campos -->
+
+
+    </LinearLayout>   <!--Layout de imagen y campos -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btnGuardar"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="7dp"
+            android:text="Guardar"
+            android:textSize="15sp" />
+        <Button
+            android:id="@+id/btnLeer"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="7dp"
+            android:text="Leer"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btnModificar"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="Modificar"
+            android:textSize="13sp"/>
+
+        <Button
+            android:id="@+id/btnEliminar"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="Eliminar"
+            android:textSize="15sp"
+            />
+    </LinearLayout>  <!-- Layout para los botones -->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewSlShF"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp" />
+</LinearLayout>
