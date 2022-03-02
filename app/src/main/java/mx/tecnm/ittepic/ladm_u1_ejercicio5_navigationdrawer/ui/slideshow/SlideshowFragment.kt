@@ -21,6 +21,7 @@ class SlideshowFragment : Fragment() {
 
     private var _binding: FragmentSlideshowBinding? = null
     lateinit var arreglos: CustomAdapter
+    public var indiceArreglo = 0
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -53,7 +54,6 @@ class SlideshowFragment : Fragment() {
         val txtNombre = binding.inputNombreLV;
         val txtMotivo = binding.inputMotivoLV;
         val txtHora = binding.inputHoraLV
-        var indiceArreglo = 0
 
         //código para la funcionalidad de los botones
 
@@ -119,15 +119,15 @@ class SlideshowFragment : Fragment() {
     }
 
     fun guardarArchivo() {
+        val index = 0
         try {
-
-            var cadena = arreglos.nombres[arreglos.nombres.lastIndex] + "\n" +
-                    arreglos.motivos[arreglos.motivos.lastIndex] + "\n" +
-                    arreglos.horas[arreglos.horas.lastIndex] + "\n"
+            var cadena = arreglos.nombres[indiceArreglo] + "\n" +
+                    arreglos.motivos[indiceArreglo] + "\n" +
+                    arreglos.horas[indiceArreglo] + "\n"
 
             val archivoEscritura =
                 requireContext().openFileOutput("Archivo.txt", AppCompatActivity.MODE_PRIVATE)
-           archivoEscritura.bufferedWriter().append(cadena)
+            archivoEscritura.bufferedWriter().append(cadena)
             Toast.makeText(
                 requireContext(),
                 "Se guardo el archivo correctamente",
